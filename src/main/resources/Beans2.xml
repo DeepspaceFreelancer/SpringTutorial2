@@ -1,0 +1,39 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <context:annotation-config/>
+
+    <!-- Definition for textEditor bean without constructor-arg  -->
+    <bean id="textEditor" class="com.tutorialspoint2.TextEditor"/>
+    <bean id="textEditor2" class="com.tutorialspoint2.TextEditor2"/>
+
+    <!-- Definition for spellChecker bean -->
+    <bean id="spellChecker" class="com.tutorialspoint2.SpellChecker"/>
+
+    <!-- Definition for profile bean -->
+    <bean id="profile" class="com.tutorialspoint2.Profile"/>
+
+    <!-- Definition for student1 bean -->
+    <bean id="student1" class="com.tutorialspoint2.Student">
+        <property name="name" value="Zara"/>
+        <property name="age" value="11"/>
+    </bean>
+
+    <!-- Definition for student2 bean -->
+    <bean id="student2" class="com.tutorialspoint2.Student">
+        <property name="name" value="Nuha"/>
+        <property name="age" value="2"/>
+    </bean>
+
+    <bean id="helloWorld" class="com.tutorialspoint2.HelloWorld" init-method="init" destroy-method="destroy">
+        <property name="message" value="Hello World!"/>
+    </bean>
+
+</beans>
